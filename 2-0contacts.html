@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="width=1200">
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+	<script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+</head>
+<body>
+<div class="topbg" style="background-image: url(img/contacts2-0.jpg)"></div>
+<!-- BEGIN  out-->
+<div class="out contacts2-0">
+	<div class="all-wrapper">
+		<div class="index">
+			<div class="wrapper">
+				<div class="header">
+					<div class="header__sidebar">
+						<a href="#" class="logo">
+							Управление механизации №79
+						</a>
+						<ul class="sidebar__menu">
+							<li class="sidebar__item"><a href="#" class="sidebar__link">ГЛАВНАЯ</a></li>
+							<li class="sidebar__item"><a href="#" class="sidebar__link">КОМПАНИЙ</a></li>
+							<li class="sidebar__item"><a href="#" class="sidebar__link">КАТАЛОГ ТЕХНИКИ</a></li>
+							<li class="sidebar__item"><a href="#" class="sidebar__link">УСЛУГИ</a></li>
+							<li class="sidebar__item"><a href="#" class="sidebar__link">ПОРТФОЛИО</a></li>
+							<li class="sidebar__item"><a href="#" class="sidebar__link is-selected-sl">КОНТАКТЫ</a></li>
+						</ul>
+					</div>
+					<div class="header__content">
+						<a href="#" class="header__button is-first-hb">ЗАКАЗАТЬ ТЕХНИКУ</a>
+						<a href="#" class="header__button is-second-hb">ПЕРЕЗВОНИТЕ</a>
+						<a href="#" class="header__lang">ENG</a>
+						<a href="#" class="header__lang is-selected-lang">РУС</a>
+						<div class="header__number">+375 (17) 344-61-23</div>
+					</div>
+					<div class="pg">
+						<div class="pg__heading">
+							<h1>Контактная информация</h1>
+						</div>
+						<div class="pg__menu"><div class="pg__menuline"></div>
+							<ul>
+								<li><a href="#">Карта проезда</a></li>
+								<li><a href="#">Форма обратной связи</a></li>
+							 </ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="wrapper-content">
+						<script>
+						ymaps.ready(init);
+
+						function init () {
+						    var myMap = new ymaps.Map("actualmap", {
+						            center: [55.704758, 37.968521],
+						            zoom: 10
+						        });
+
+						     pl1 = new ymaps.Placemark([55.684758, 37.738521], {
+						              balloonContent: '<div class="bco"><h3>ТЦ “Galileo”</h3>г. Минск, ул. Бобруйская 6, 3-й этаж Тел/факс: +375 (17) 394-91-11 Режим работы: пн-пт.: 10 - 20, сб-вс.: 11-18.</div>'
+						        }, {
+						            preset: 'islands#icon',
+						            iconColor: '#0095b6'
+						        });
+						 
+
+						    myMap.geoObjects
+						        .add(pl1);
+						}
+
+		</script>
+					<div id="mymap">
+						<div id="actualmap"></div>
+						<div class="mymap__popup">
+							<h3 class="object__heading">Офис в Минске</h3>
+							<span class="mymap__popup-address">220075, г. Минск, ул. Селицкого, д. 27, корп. 2</span>
+							<div class="news__text">
+								<p>Режим работы: понедельник — пятница с 8:00 до 17:00.
+									суббота, воскресенье — выходной.</p>
+								<h5 class="history__date-subheading">Телефоны и е-мэйл</h5>
+								<span>+375 (17) 334-61-23, 334-26-42</span>
+								<a href="#">info@um79.by</a>
+								<a href="#" id="mymap__button" class="mymap__popup-button js-popup" data-popup="popup3">
+									НАПИСАТЬ ПИСЬМО
+								</a>
+							</div>
+						</div>
+					</div>
+			<div class="wrapper-white">
+					<div class="footer">
+						<div class="footer__info">
+							<div class="footer__logo">© 1953–2014 ОАО “Управление механизации №79”</div>
+							<div class="footer__contacts">Позвоните: +375 (17) 344-61-23, 344-26-42 или напишите нам: <a href="#">Info@um79.by</a></div>
+							<a href="#" class="flexmedia">Разработка сайта<br /> Flex Media</a>
+						</div>
+					</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- END out-->
+
+<div class="popup popup3" id="popup3">
+	<form class='validation'>
+		<div class="popup__close"></div>
+		<h3 class="popup__heading">Форма обратной связи</h3>
+		<div class="popup__content popup__content_blue">
+			<div class="popup__left-column">
+				Ваше имя, должность*<br />
+				<input type="text" class="popup__text" data-validation="required"><br />
+				e-mail<br />
+				<input type="text" class="popup__text"><br />
+			</div>
+			<div class="popup__right-column">
+				Телефон*<br />
+				<input type="text" class="popup__text" data-validation="length" data-validation-length="5-19"><br />
+				Название компании<br />
+				<input type="text" class="popup__text"><br />
+			</div>
+		</div>
+		<input type="submit" value="ОТПРАВИТЬ" class="popup__submit">
+	</form>
+</div>
+<div class="overlay"></div>
+
+<script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
+</body>
+</html>
