@@ -682,9 +682,17 @@ select { text-indent: 5px; }
 	color: #10498e;
 }
 
+
+
 .popup__text.error {
 	border-color: red;
 }
 .help-block {
 	display: none!important;
+}
+.popup__center-column {
+	padding: 0 38px;
+}
+.popup-textarea {
+	margin-bottom: 35px;
 }
