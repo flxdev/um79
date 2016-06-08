@@ -651,7 +651,8 @@ select { text-indent: 5px; }
 @keyframes pace-spinner { 0% { transform: rotate(0deg); transform: rotate(0deg); }
   100% { transform: rotate(360deg); transform: rotate(360deg); } }
 
-  .comp-r {
+
+.comp-r {
 	position: relative;
 }
 .crumbs {
@@ -710,3 +711,16 @@ select { text-indent: 5px; }
   .news { float: left; width: 22%; width: 21%; padding: 120px 4% 0px 0%; }
 }
 .description {float:left}
+
+.popup__text.error {
+	border-color: red;
+}
+.help-block {
+	display: none!important;
+}
+.popup__center-column {
+	padding: 0 38px;
+}
+.popup-textarea {
+	margin-bottom: 35px;
+}
